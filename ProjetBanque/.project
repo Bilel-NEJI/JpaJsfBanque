@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ProjetBanque</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.common.project.facet.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.wst.validation.validationbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
+		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
+		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/bluesky-1.0.0.jar</name>
+			<type>1</type>
+			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/bluesky-1.0.0.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/jsf-api-2.0.jar</name>
+			<type>1</type>
+			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/Libraries de l&apos;enseignante/Extraction/jsf-api-2.0.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/jsf-impl-2.0.10.jar</name>
+			<type>1</type>
+			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/Libraries de l&apos;enseignante/Extraction/jsf-impl-2.0.10.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/jsf-tlds.jar</name>
+			<type>1</type>
+			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/Libraries de l&apos;enseignante/Extraction/jsf-tlds.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/jstl-1.2.jar</name>
+			<type>1</type>
+			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/Libraries de l&apos;enseignante/Extraction/jstl-1.2.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/jstl-standard.jar</name>
+			<type>1</type>
+			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/Libraries de l&apos;enseignante/Extraction/jstl-standard.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/mysql-connector-java-5.1.47-bin.jar</name>
+			<type>1</type>
+			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 1 -/mysql-connector-java-5.1.47-bin.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/primefaces-5.0.jar</name>
+			<type>1</type>
+			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/Libraries de l&apos;enseignante/Extraction/primefaces-5.0.jar</location>
+		</link>
+		<link>
+			<name>src/main/webapp/WEB-INF/lib/start-1.0.10.jar</name>
+			<type>1</type>
+			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/Libraries de l&apos;enseignante/Extraction/start-1.0.10.jar</location>
+		</link>
+	</linkedResources>
+</projectDescription>
