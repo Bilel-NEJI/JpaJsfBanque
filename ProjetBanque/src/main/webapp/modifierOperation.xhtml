@@ -6,27 +6,24 @@
       xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<title>Ajout Client</title>
+	<title>Modifier Client</title>
 </h:head>
 
 <h:body>
 	<f:view>
-		<h:form id="ajout">
-			<p:panel header="Ajouter Operation" style ="font-size:16px">
+		<h:form id="modifie">
+			<p:panel header="Modifier Client" style ="font-size:16px">
 				<h:panelGrid columns="2">
 					<p:outputLabel value ="N° Operation"></p:outputLabel>
 					<p:inputText value="#{gOperation.op.numOperation}"></p:inputText>
 					
-					
 					<p:outputLabel value="Montant"></p:outputLabel>
-					<p:inputText id="t" value="#{gOperation.op.montant}" required="true" requiredMessage="Montant obligatoire" />
-
-
-					<p:commandButton value="Ajouter" action="#{gOperation.ajouterOperation}"/>
+					<p:inputText id="r" value="#{gOperation.op.montant}" required="true" requiredMessage="Montant obligatoire" />
+					
+					<p:commandButton value="Modifier" action="#{gOperation.modifierOperation}"/>
 				</h:panelGrid>
 			</p:panel>
 		</h:form>
 	</f:view>
-</h:body></html>
-   
-   
+</h:body>
+</html>

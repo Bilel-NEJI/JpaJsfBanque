@@ -4,34 +4,36 @@
       xmlns:h="http://java.sun.com/jsf/html" 
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-	<h:head></h:head>
+	<h:head>
+	<title>Affichage Clients</title></h:head>
 	<h:body>
 		<f:view>
 			<h:form id="liste">
 				<p:dataTable id="dataTable" var="p"  value="#{gClient.listeClients}" border="2" paginator="true">
 					<p:column sortBy= "#{p.id}">
-						<f:facet name ="header"></f:facet>
-						<h:outputLabel value="id "/>
+						<f:facet name ="header">
+							<h:outputLabel value="Id"/>
+						</f:facet>
 						<h:outputText value="#{p.id}"/>
 					</p:column>
 			
 					<p:column>
 						<f:facet name="header">
-							<h:outputText value="nom" />
+							<h:outputText value="Nom" />
 						</f:facet>
 						<h:outputText value="#{p.nom}" />
 					</p:column>
 					
 					<p:column>
 						<f:facet name="header">
-							<h:outputText value="prenom" />
+							<h:outputText value="Prenom" />
 						</f:facet>
 						<h:outputText value="#{p.prenom}" />
 					</p:column>
 					
 					<p:column>
 						<f:facet name="header">
-							<h:outputText value="adresse" />
+							<h:outputText value="Adresse" />
 						</f:facet>
 						<h:outputText value="#{p.adresse}" />
 					</p:column>

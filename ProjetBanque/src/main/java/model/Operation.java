@@ -18,11 +18,6 @@ public class Operation implements Serializable {
 
 	private float montant;
 
-	//bi-directional many-to-one association to Compte
-	@ManyToOne
-	@JoinColumn(name="id_compte")
-	private Compte compte;
-
 	public Operation() {
 	}
 
@@ -40,14 +35,6 @@ public class Operation implements Serializable {
 
 	public void setMontant(float montant) {
 		this.montant = montant;
-	}
-
-	public Compte getCompte() {
-		return this.compte;
-	}
-
-	public void setCompte(Compte compte) {
-		this.compte = compte;
 	}
 
 }

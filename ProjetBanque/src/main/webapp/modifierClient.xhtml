@@ -6,34 +6,32 @@
       xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-	<title>Ajout Client</title>
+	<title>Modifier Client</title>
 </h:head>
 
 <h:body>
 	<f:view>
-		<h:form id="ajout">
-			<p:panel header="Ajouter Client" style ="font-size:16px">
+		<h:form id="modifie">
+			<p:panel header="Modifier Client" style ="font-size:16px">
 				<h:panelGrid columns="2">
-					<p:outputLabel value ="id"></p:outputLabel>
+					<p:outputLabel value ="Id"></p:outputLabel>
 					<p:inputText value="#{gClient.cl.id}"></p:inputText>
 					
-					<p:outputLabel value="nom"></p:outputLabel>
+					<p:outputLabel value="Nom"></p:outputLabel>
 					<p:inputText id="r" value="#{gClient.cl.nom}" required="true" requiredMessage="Nom obligatoire" />
-
 					
-					<p:outputLabel value="prenom"></p:outputLabel>
+					<p:outputLabel value="Prenom"></p:outputLabel>
 					<p:inputText id="t" value="#{gClient.cl.prenom}" required="true" requiredMessage="Prenom obligatoire" />
-
-					
-					<p:outputLabel value="adresse"></p:outputLabel>
+	
+					<p:outputLabel value="Adresse"></p:outputLabel>
 					<p:inputText id="y" value="#{gClient.cl.adresse}" required="true" requiredMessage="Adresse obligatoire" />
-
 					
-					<p:commandButton value="Ajouter" action="#{gClient.ajouterClient}"/>
+					<p:commandButton value="Modifier" action="#{gClient.modifierClient}"/>
 				</h:panelGrid>
 			</p:panel>
 		</h:form>
 	</f:view>
-</h:body></html>
+</h:body>
+</html>
    
    

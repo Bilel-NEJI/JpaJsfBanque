@@ -19,10 +19,4 @@
 		<managed-bean-class>metier.OperationMetier</managed-bean-class>
 		<managed-bean-scope>application</managed-bean-scope>
 	</managed-bean>
-	<managed-bean>
-		<managed-bean-name>gCarteTechnologique</managed-bean-name>
-		<managed-bean-class>model.Cartetechnologique</managed-bean-class>
-		<managed-bean-scope>application</managed-bean-scope>
-	</managed-bean>
-
 </faces-config>

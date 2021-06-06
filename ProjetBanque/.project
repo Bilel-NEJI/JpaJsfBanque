@@ -60,11 +60,6 @@
 			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/Libraries de l&apos;enseignante/Extraction/jstl-standard.jar</location>
 		</link>
 		<link>
-			<name>src/main/webapp/WEB-INF/lib/mysql-connector-java-5.1.47-bin.jar</name>
-			<type>1</type>
-			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 1 -/mysql-connector-java-5.1.47-bin.jar</location>
-		</link>
-		<link>
 			<name>src/main/webapp/WEB-INF/lib/primefaces-5.0.jar</name>
 			<type>1</type>
 			<location>D:/Polytech Intl/Master en Génie Logiciel/03 - 1ére Année/Semestre 02/20 - Prog. Java Avancée 2/Chap 6 - JSF (Front) + JPA (Back)/Libraries de l&apos;enseignante/Extraction/primefaces-5.0.jar</location>

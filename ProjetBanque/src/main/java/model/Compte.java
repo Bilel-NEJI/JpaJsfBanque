@@ -2,7 +2,6 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.util.List;
 
 
 /**
@@ -19,14 +18,10 @@ public class Compte implements Serializable {
 
 	private float solde;
 
-	//uni-directional many-to-one association to Client
+	//bi-directional many-to-one association to Client
 	@ManyToOne
 	@JoinColumn(name="id_client")
 	private Client client;
-
-	//bi-directional many-to-one association to Operation
-	@OneToMany(mappedBy="compte")
-	private List<Operation> operations;
 
 	public Compte() {
 	}
@@ -54,27 +49,18 @@ public class Compte implements Serializable {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-
-	public List<Operation> getOperations() {
-		return this.operations;
+	
+	public Compte(int numCompte, float solde, Client client) {
+		super();
+		this.numCompte = numCompte;
+		this.client = client;
+		this.solde = solde;
 	}
-
-	public void setOperations(List<Operation> operations) {
-		this.operations = operations;
-	}
-
-	public Operation addOperation(Operation operation) {
-		getOperations().add(operation);
-		operation.setCompte(this);
-
-		return operation;
-	}
-
-	public Operation removeOperation(Operation operation) {
-		getOperations().remove(operation);
-		operation.setCompte(null);
-
-		return operation;
+	
+	public Compte(int numCompte, float solde) {
+		super();
+		this.numCompte = numCompte;
+		this.solde = solde;
 	}
 
 }

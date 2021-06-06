@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.List;
 
 
 /**
@@ -22,10 +23,9 @@ public class Client implements Serializable {
 
 	private String prenom;
 
-	//uni-directional one-to-one association to Cartetechnologique
-	@OneToOne
-	@JoinColumn(name="id", referencedColumnName="id_client2")
-	private Cartetechnologique cartetechnologique;
+	//bi-directional many-to-one association to Compte
+	@OneToMany(mappedBy="client")
+	private List<Compte> comptes;
 
 	public Client() {
 	}
@@ -62,23 +62,43 @@ public class Client implements Serializable {
 		this.prenom = prenom;
 	}
 
-	public Cartetechnologique getCartetechnologique() {
-		return this.cartetechnologique;
+	public List<Compte> getComptes() {
+		return this.comptes;
 	}
 
-	public void setCartetechnologique(Cartetechnologique cartetechnologique) {
-		this.cartetechnologique = cartetechnologique;
+	public void setComptes(List<Compte> comptes) {
+		this.comptes = comptes;
 	}
 
-	public Client(int id, String adresse, String nom, String prenom, Cartetechnologique cartetechnologique) {
+	public Compte addCompte(Compte compte) {
+		getComptes().add(compte);
+		compte.setClient(this);
+
+		return compte;
+	}
+
+	public Compte removeCompte(Compte compte) {
+		getComptes().remove(compte);
+		compte.setClient(null);
+
+		return compte;
+	}
+	
+	public Client(int id, String nom, String prenom, String adresse, List<Compte> comptes) {
 		super();
 		this.id = id;
-		this.adresse = adresse;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.cartetechnologique = cartetechnologique;
+		this.adresse = adresse;
+		this.comptes = comptes;
 	}
 	
-	
+	public Client(int id, String nom, String prenom, String adresse) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresse = adresse;
+	}
 
 }

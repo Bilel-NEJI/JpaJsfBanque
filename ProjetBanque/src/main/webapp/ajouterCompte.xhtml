@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Ajout Compte</title>
+</h:head>
+
+<h:body>
+	<f:view>
+		<h:form id="ajoutCompte">
+			<p:panel header="Ajouter Compte" style ="font-size:16px">
+				<h:panelGrid columns="2">
+					<p:outputLabel value ="N° Compte"></p:outputLabel>
+					<p:inputText value="#{gCompte.cpt.numCompte}"></p:inputText>
+					 
+					<p:outputLabel value="Solde"></p:outputLabel>
+					<p:inputText id="t" value="#{gCompte.cpt.solde}" required="true" requiredMessage="Solde obligatoire"/>
+					
+					<!-- 
+					<p:outputLabel value="Id Client"></p:outputLabel>
+					<p:inputText id="t" value="#{gCompte.cpt.id_client}" required="true" requiredMessage="Id Client obligatoire"/>
+					 --> 
+
+					<p:commandButton value="Ajouter" action="#{gCompte.ajouterCompte}"/>
+				</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</f:view>
+</h:body>
+</html>
+   
+   

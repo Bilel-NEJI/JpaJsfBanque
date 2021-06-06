@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtmli-trqnsitional.dtd">
+<html	xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:p="http://primefaces.org/ui">
+		
+		<h:head><title>Suppression Operations</title></h:head>
+		<h:body>
+			<f:view>
+				<h:form id="suppression">
+					<p:panel header="Suppression d'une Operation" style="font-size:16px">
+						<p:panelGrid columns="2">
+							<p:outputLabel value="N° Operation"></p:outputLabel>
+							<p:inputText value="#{gOperation.op.numOperation}"></p:inputText>
+							<p:commandButton value="Supprimer" action="#{gOperation.supprimerOperationByNum}"/>
+						</p:panelGrid>
+					</p:panel>
+				</h:form>
+			</f:view>
+		</h:body>
+</html>

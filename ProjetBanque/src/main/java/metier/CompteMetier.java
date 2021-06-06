@@ -13,16 +13,21 @@ import model.Compte;
 
 public class CompteMetier implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Compte cpt = new Compte();
 	private CompteDAO dao = new CompteDAO();
 	private List <Compte> listeComptes = new ArrayList <Compte> ();
 
+	
 	public CompteMetier() {}
 
-	public Compte getCl() {
+	public Compte getCpt() {
 		return cpt;	}
 
-	public void setCl(Compte cl) {
+	public void setCpt(Compte cpt) {
 		this.cpt = cpt;	}
 	
 
@@ -31,39 +36,28 @@ public class CompteMetier implements Serializable {
 		listeComptes = dao.afficherComptes();
 		return listeComptes;	}
 
-	public void setListeComptes(List<Compte> listeComptes) {
-		this.listeComptes = listeComptes;	}
+	
+	/*public void setListeComptes(List<Compte> listeComptes) {
+		this.listeComptes = listeComptes;	}*/
 
+	
 	//méthode qui ajoute un client
 	public void ajouterCompte() {
-		if (dao.ajouterCompte(cpt) == 0)
-			{	FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Ajout d'un Compte", "Ajout effectué avec succés");
-				RequestContext.getCurrentInstance().showMessageInDialog(message);	}
-		else {	FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Ajout d'un Compte", "Ajout non effectué");
-				RequestContext.getCurrentInstance().showMessageInDialog(message);	}	}
+		dao.ajouterCompte(cpt);		}
 		
 		
 	//méthode qui cherche un client by id
-		public void chercherClientById(int byId) {
-				
-					}
+		public void chercherClientById(int numCompte) {
+			dao.chercherCompteByNumCompte(numCompte);		}
 			
 	//méthode qui supprime un compte by numCompte
 		public void supprimerCompteByNumCompte(int numCompte) {
-			if (dao.supprimerCompteByNumCompte(numCompte) == 0)
-				{	FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Suppression d'un Compte by numCompte", "Suppression effectuée avec succés");
-					RequestContext.getCurrentInstance().showMessageInDialog(message);	}
-				else {	FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Suppression d'un Compte by numCompte", "Suppression non effectuée");
-						RequestContext.getCurrentInstance().showMessageInDialog(message);	}	}
+			dao.supprimerCompteByNumCompte(numCompte);	}
+				
 		
 		
 	//méthode qui modifie le solde d'un compte by numCompte
 		public void modifierCompteByNumCompte(int numCompte, float sld) {
-			if (dao.modifierCompteByNumCompte(numCompte, sld) == 0)
-				{	FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Mise à jour du solde Compte by numCompte", "Mise à jour effectuée avec succés");
-					RequestContext.getCurrentInstance().showMessageInDialog(message);	}
-				else {	FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Mise à jour du solde Compte by numCompte", "Mise à jour non effectuée");
-						RequestContext.getCurrentInstance().showMessageInDialog(message);	}
-			}
+			dao.modifierCompteByNumCompte(cpt);		}
 
 }

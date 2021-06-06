@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+	<h:head>
+	<title>Affichage Comptes</title></h:head>
+	<h:body>
+		<f:view>
+			<h:form id="liste">
+				<p:dataTable id="dataTable" var="p"  value="#{gCompte.afficherComptes}" border="2" paginator="true">
+					<p:column sortBy= "#{p.id}">
+						<f:facet name ="header">
+							<h:outputLabel value="NumCompte"/>
+						</f:facet>
+						<h:outputText value="#{p.numCmpte}"/>
+					</p:column>
+			
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="id_Client" />
+						</f:facet>
+						<h:outputText value="#{p.id_client}" />
+					</p:column>
+					
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Solde" />
+						</f:facet>
+						<h:outputText value="#{p.solde}" />
+					</p:column>
+				</p:dataTable>
+			</h:form>
+		</f:view>
+	</h:body>
+</html>
